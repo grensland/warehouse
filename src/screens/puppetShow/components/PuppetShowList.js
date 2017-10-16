@@ -1,14 +1,13 @@
 import React from 'react';
+import { PuppetShow } from './PuppetShow';
 
 export const PuppetShowList = ({ puppetShows }) => {
   console.log('PUPPETSHOWS STATE', puppetShows);
   return (
     <div>De poppenkastlijst, without rows
-      <ul>
-        {puppetShows.puppetShows.map((show) => (
-          <li key={show.id}>{show.title}</li>
-        ))}
-      </ul>
+      {puppetShows.puppetShows.map((show) => (
+        <PuppetShow show={show} key={show.id} />
+      ))}
     </div>
   );
 };
