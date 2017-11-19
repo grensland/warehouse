@@ -1,7 +1,6 @@
-import * as CONSTANTS from '../common/PuppetShowConstants';
+import { PUPPET_SHOW_ACTIONS } from '../common/PuppetShowConstants';
 
-export const getPuppetShows = () => ({
-  type: CONSTANTS.GET_ALL_PUPPET_SHOWS,
+// eslint-disable-next-line import/prefer-default-export
+export const fetchPuppetShowsRequest = () => ({
+  type: PUPPET_SHOW_ACTIONS.FETCH_PUPPET_SHOWS_REQUEST,
 });
-
-export default getPuppetShows();

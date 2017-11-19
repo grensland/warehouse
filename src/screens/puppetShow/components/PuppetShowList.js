@@ -1,13 +1,17 @@
 import React from 'react';
-import { PuppetShow } from './PuppetShow';
+import { PuppetShowCard } from './PuppetShowCard';
+import * as G from '../../../common/components/StyledComponentsGrensland';
 
 export const PuppetShowList = ({ puppetShows }) => {
   console.log('PUPPETSHOWS STATE', puppetShows);
   return (
-    <div>De poppenkastlijst, without rows
-      {puppetShows.puppetShows.map((show) => (
-        <PuppetShow show={show} key={show.id} />
-      ))}
+    <div>
+      <G.PageTitle>Lijst van de poppenkast stukken</G.PageTitle>
+      <div>
+        {puppetShows.puppetShows.map((show) => (
+          <PuppetShowCard show={show} key={show.id} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import * as CONSTANTS from '../common/PuppetShowConstants';
+import { PUPPET_SHOW_ACTIONS } from '../common/PuppetShowConstants';
 
 const initialState = {
   nav: {
@@ -9,7 +10,7 @@ const initialState = {
 const PuppetShowReducer = (state = initialState, action) => {
   console.log(`ACTION: ${action.type}`, state);
   switch (action.type) {
-    case CONSTANTS.GET_ALL_PUPPET_SHOWS:
+    case PUPPET_SHOW_ACTIONS.FETCH_PUPPET_SHOWS_REQUEST:
       return Object.assign({}, state, {
         puppetShows: [
           {
@@ -29,6 +30,16 @@ const PuppetShowReducer = (state = initialState, action) => {
                 name: 'oma',
               },
             ],
+            scenes: [
+              {
+                id: 0,
+                name: 'Troonzaal',
+              },
+              {
+                id: 1,
+                name: 'Bos',
+              },
+            ],
           },
           {
             id: 1,
@@ -37,6 +48,16 @@ const PuppetShowReducer = (state = initialState, action) => {
               {
                 id: 3,
                 name: 'Prins',
+              },
+            ],
+            scenes: [
+              {
+                id: 0,
+                name: 'Troonzaal',
+              },
+              {
+                id: 1,
+                name: 'Bos',
               },
             ],
           },
